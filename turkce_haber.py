@@ -3,7 +3,7 @@
 import json
 
 # Dosyanın yolu
-file_path = 'C:/Users/Cansu/OneDrive/Masaüstü/2020717022/data/news.json'
+file_path = '' # new.json dosya uzantısı
 
 # Dosyayı yükle ve JSON verilerini oku
 with open(file_path, 'r', encoding='utf-8') as file:
@@ -13,7 +13,7 @@ with open(file_path, 'r', encoding='utf-8') as file:
 turkce_haberler = [haber for haber in data if haber.get('Language') == 'tr']
 
 # Türkçe haberleri kaydet
-filtered_file_path = 'C:/Users/Cansu/OneDrive/Masaüstü/2020717022/data/news.json'
+filtered_file_path = '' # new.json dosya uzantısı
 with open(filtered_file_path, 'w', encoding='utf-8') as file:
     json.dump(turkce_haberler, file, ensure_ascii=False, indent=4)
 
